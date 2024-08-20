@@ -48,7 +48,8 @@ const handleCountryClick =(country) => {
     <div>
         <div>
             {Object.keys(continents).map(continent => (
-                    <button key={continent} onClick={() => handleContinentClick(continent)}>
+                    <button key={continent} onClick={() => handleContinentClick(continent)}
+                    className='btn btn-success'>
                     {continent}
                     </button>
                 ))}     
@@ -56,10 +57,10 @@ const handleCountryClick =(country) => {
     {SelectedContinent && (            
     <div>
         <h2>{SelectedContinent}</h2>
-        <ul>
+        <ul className='list-group'>
             {continents[SelectedContinent].map(country => (
-                <li key={country.cca3}>
-                <button onClick={() => handleCountryClick(country)}>
+                <li key={country.cca3} className='list-group-item'>
+                <button onClick={() => handleCountryClick(country)} className='btn btn-primary'>
                     {country.name.common}
                     </button>
                 </li>
