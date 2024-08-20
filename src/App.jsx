@@ -75,7 +75,8 @@ const handleCountryClick =(country) => {
         <p>Region: {selectedCountry.region}</p>
         <p>Zona Horaria: {selectedCountryTimezone}</p>
         <p>Bandera: <img src={selectedCountry.flags.png} alt={'Bandera de ${selectedCountry.name.common}'}
-        width={100} height={100}/></p>
+
+        width={100} height={60}/></p>
         </div>
     )}
        </div>
